@@ -21,7 +21,7 @@ export const loginAPI = async (
             { withCredentials: true }
         );
         dispatch(login(res.data));
-        socket.current = io("ws://localhost:8000");
+        socket.current = io(import.meta.env.VITE_SOCKET_ORIGIN);
         navigate(location.state?.prevUrl || import.meta.env.VITE_APP);
         toast.success("Login Successful");
         setLoading(false);
