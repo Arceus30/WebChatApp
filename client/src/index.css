@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.customScroll {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.customScroll::-webkit-scrollbar {
+    display: hidden;
+}
+
+.customHead1 {
+    font-size: 0.8rem !important;
+    text-align: center !important;
+}
+
+@media (min-width: 640px) {
+    .customHead1 {
+        font-size: 1rem !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .customHead1 {
+        font-size: 1.2rem !important;
+    }
+}
+
+.icon {
+    font-size: 1em !important;
+}
+
+@media (min-width: 1024px) {
+    .icon {
+        font-size: 1.1em !important;
+    }
+}
