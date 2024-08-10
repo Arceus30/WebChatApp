@@ -21,7 +21,11 @@ export const loginAPI = async (
             { withCredentials: true }
         );
         dispatch(login(res.data));
+        console.log("Socket Before", socket);
+        console.log("Socket Before", socket.current);
         socket.current = io(import.meta.env.VITE_SOCKET_ORIGIN);
+        console.log("Socket After", socket);
+        console.log("Socket After", socket.current);
         navigate(location.state?.prevUrl || import.meta.env.VITE_APP);
         toast.success("Login Successful");
         setLoading(false);
